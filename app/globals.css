@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary colors - Deep teal */
+    --primary: 175 74% 39%; /* #1eb8b8 */
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary colors - Soft purple */
+    --secondary: 262 83% 58%; /* #7c3aed */
+    --secondary-foreground: 0 0% 98%;
+
+    /* Accent colors - Warm coral */
+    --accent: 12 89% 64%; /* #ff6b6b */
+    --accent-foreground: 0 0% 98%;
+
+    /* Neutral colors - Clean grayscale */
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    /* UI element colors */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+
+    /* Semantic colors */
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --destructive: 0 84% 60%;
+    --info: 199 89% 48%;
+
+    /* Radius and shadows */
+    --radius: 0.5rem;
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    /* Animation durations */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 175 74% 39%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 12 89% 64%;
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Typography styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl;
+  }
+
+  /* Animation classes */
+  .animate-fade-in {
+    animation: fadeIn var(--transition-normal) ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp var(--transition-normal) ease-out;
+  }
+
+  .animate-scale {
+    transition: transform var(--transition-fast);
+  }
+
+  .animate-scale:hover {
+    transform: scale(1.02);
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Accessibility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
