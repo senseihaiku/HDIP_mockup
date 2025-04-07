@@ -16,6 +16,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'export', // Add this line for static export
+  // Configure basePath and assetPrefix for GitHub Pages deployment
+  basePath: process.env.NODE_ENV === 'production' ? '/HDIP_mockup' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/HDIP_mockup/' : '',
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
