@@ -8,8 +8,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export function RoleMatrixView() {
+  // Define role type for type safety
+  type Role = "Administrator" | "Data Steward" | "Researcher" | "Viewer";
+
   // Mock roles and permissions data
-  const roles = ["Administrator", "Data Steward", "Researcher", "Viewer"]
+  const roles: Role[] = ["Administrator", "Data Steward", "Researcher", "Viewer"]
 
   const permissionGroups = [
     {
@@ -45,7 +48,7 @@ export function RoleMatrixView() {
   ]
 
   // Mock permission matrix (which roles have which permissions)
-  const permissionMatrix = {
+  const permissionMatrix: Record<Role, string[]> = {
     Administrator: [
       "dataset.view",
       "dataset.create",
@@ -167,4 +170,3 @@ export function RoleMatrixView() {
     </Card>
   )
 }
-

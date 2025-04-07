@@ -155,6 +155,43 @@ export function AppSidebar() {
               title="Value Calculator"
               isActive={isActive("/value-calculator")}
             />
+            <SidebarItem
+              href="/knowledge-graph"
+              icon={<svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 2H15C16.1046 2 17 2.89543 17 4V6C17 7.10457 16.1046 8 15 8H9C7.89543 8 7 7.10457 7 6V4C7 2.89543 7.89543 2 9 2Z" stroke="currentColor" strokeWidth="2" />
+                <path d="M3 14H9C10.1046 14 11 14.8954 11 16V18C11 19.1046 10.1046 20 9 20H3C1.89543 20 1 19.1046 1 18V16C1 14.8954 1.89543 14 3 14Z" stroke="currentColor" strokeWidth="2" />
+                <path d="M15 14H21C22.1046 14 23 14.8954 23 16V18C23 19.1046 22.1046 20 21 20H15C13.8954 20 13 19.1046 13 18V16C13 14.8954 13.8954 14 15 14Z" stroke="currentColor" strokeWidth="2" />
+                <path d="M12 8V14" stroke="currentColor" strokeWidth="2" />
+                <path d="M7 14L9 12" stroke="currentColor" strokeWidth="2" />
+                <path d="M17 14L15 12" stroke="currentColor" strokeWidth="2" />
+              </svg>}
+              title="Knowledge Graph"
+              isActive={isActive("/knowledge-graph")}
+            />
+            <SidebarItem
+              href="/digital-twin"
+              icon={<svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" />
+                <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" strokeWidth="2" />
+                <path d="M17.5 6.5L16 8" stroke="currentColor" strokeWidth="2" />
+                <path d="M6.5 17.5L8 16" stroke="currentColor" strokeWidth="2" />
+              </svg>}
+              title="Digital Twin"
+              isActive={isActive("/digital-twin")}
+            />
+            <SidebarItem
+              href="/matchmaking"
+              icon={<svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9V5C14 3.89543 13.1046 3 12 3L8 3C6.89543 3 6 3.89543 6 5L6 9C6 10.1046 6.89543 11 8 11L12 11C13.1046 11 14 10.1046 14 9Z" stroke="currentColor" strokeWidth="2" />
+                <path d="M18 9L18 5C18 3.89543 17.1046 3 16 3" stroke="currentColor" strokeWidth="2" />
+                <path d="M18 9C18 10.1046 17.1046 11 16 11" stroke="currentColor" strokeWidth="2" />
+                <path d="M6 15L6 19C6 20.1046 6.89543 21 8 21L12 21C13.1046 21 14 20.1046 14 19L14 15C14 13.8954 13.1046 13 12 13L8 13C6.89543 13 6 13.8954 6 15Z" stroke="currentColor" strokeWidth="2" />
+                <path d="M18 15L18 19C18 20.1046 17.1046 21 16 21" stroke="currentColor" strokeWidth="2" />
+                <path d="M18 15C18 13.8954 17.1046 13 16 13" stroke="currentColor" strokeWidth="2" />
+              </svg>}
+              title="Matchmaking"
+              isActive={isActive("/matchmaking")}
+            />
           </div>
 
           <h2 className="mb-2 mt-4 px-4 text-lg font-semibold tracking-tight">Settings</h2>
@@ -177,4 +214,3 @@ export function AppSidebar() {
     </div>
   )
 }
-
